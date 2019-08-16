@@ -21,7 +21,11 @@ workflows:
     version: 2
     test-ci:
       jobs:
-        - print-commit
+        - print-commit:
+            filters:
+              branches:
+                ignore:
+                  - /.*/
         - print-tag:
             filters:
               branches:
